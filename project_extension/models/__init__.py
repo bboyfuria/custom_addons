@@ -1,1 +1,1 @@
-from . import project_extension
+from . import project
