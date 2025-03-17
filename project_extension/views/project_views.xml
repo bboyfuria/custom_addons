@@ -71,7 +71,7 @@
                 <field name="project_type" string="Project Type"/>
                 <field name="industry_type" string="Industry Type"/>
                 <field name="client_priority" string="Client Priority"/>
-                <field name="expected_revenue" string="Expected Revenue" widget="monetary" options="{'currency_field': 'company_currency'}" class="custom-text-left"/>
+                <field name="expected_revenue" string="Expected Revenue" widget="monetary" options="{'currency_field': 'company_currency'}"/>
                 <field name="contract_signed" string="Contract Signed" class="text-center"/>
             </xpath>
         </field>
