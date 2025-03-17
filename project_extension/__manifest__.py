@@ -8,11 +8,6 @@
         'views/project_views.xml',
         'security/ir.model.access.csv'
     ],
-    "assets": {
-        'web.assets_backend': [
-            'custom_addons/project_extension/static/src/project_extension.scss',
-        ],
-    },
     "installable": True,
     "application": False,
 }
