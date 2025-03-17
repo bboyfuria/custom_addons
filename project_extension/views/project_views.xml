@@ -1,0 +1,103 @@
+<odoo>
+    <!-- Custom create project form view -->
+    <record id="project_project_view_form_extension" model="ir.ui.view">
+        <field name="name">project.project.view.form.extension</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.project_project_view_form_simplified"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@class='row o_settings_container']" position="before">
+                <group string="Project Details 📝">
+                    <field name="project_type" placeholder="-- Select Option --"/>
+                    <field name="industry_type" placeholder="-- Select Option --" invisible="project_type != 'client' and project_type != 'government'"/>
+                    <field name="client_priority" placeholder="-- Select Option --"/>
+                    <field name="risk_assessment" placeholder="Select employee" invisible="client_priority != 'high'"/>
+                    <field name="expected_revenue" widget="monetary" options="{'currency_field': 'company_currency'}"/>
+                </group>
+
+                <group string="Contract Information 📜">
+                    <field name="contract_signed"/>
+                    <field name="contract_start_date" placeholder="Select date" required="contract_signed == True"/>
+                    <field name="contract_end_date" placeholder="Select date" required="contract_signed == True"/>
+                </group>
+                <div style="height: 80px;"></div>
+            </xpath>
+            <xpath expr="//div[@name='alias_def']" position="after">
+                <div style="height: 100px;"></div>
+            </xpath>
+        </field>
+    </record>
+    
+    <!-- Custom edit project form view -->
+    <record id="view_project_form_extension" model="ir.ui.view">
+        <field name="name">project.project.form.inherit.custom</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project"/>
+        <field name="arch" type="xml">
+            
+            <!-- Add Project Name Label -->
+            <xpath expr="//div[@class='oe_title']/h1" position="before">
+                <span class="fw-bold d-block">Project Name:</span>
+            </xpath>
+            
+            <xpath expr="//div[@class='oe_title']" position="after">
+                <group>
+                    <group string="Project Details 📝">
+                        <field name="project_type" placeholder="-- Select Option --"/>
+                        <field name="industry_type" placeholder="-- Select Option --" invisible="project_type != 'client' and project_type != 'government'"/>
+                        <field name="client_priority" placeholder="-- Select Option --"/>
+                        <field name="risk_assessment" placeholder="Select employee" invisible="client_priority != 'high'"/>
+                        <field name="expected_revenue" widget="monetary" options="{'currency_field': 'company_currency'}"/>
+                    </group>
+
+                    <group string="Contract Information 📜">
+                        <field name="contract_signed"/>
+                        <field name="contract_start_date" placeholder="Select date" required="contract_signed == True"/>
+                        <field name="contract_end_date" placeholder="Select date" required="contract_signed == True"/>
+                    </group>
+                </group>
+                <div style="height: 20px;"></div>
+            </xpath>
+        </field>
+    </record>
+
+
+    <!-- Custom list view -->
+    <record id="project_project_view_list_extension" model="ir.ui.view">
+        <field name="name">project.project.list.extension</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.view_project"/>
+        <field name="arch" type="xml">
+            <xpath expr="//list/field[@name='user_id']" position="after">
+                <field name="project_type" string="Project Type"/>
+                <field name="industry_type" string="Industry Type"/>
+                <field name="client_priority" string="Client Priority"/>
+                <field name="expected_revenue" string="Expected Revenue" widget="monetary" options="{'currency_field': 'company_currency'}" class="custom-text-left"/>
+                <field name="contract_signed" string="Contract Signed" class="text-center"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Custom filters for list view -->
+    <record id="view_project_project_filter_extension" model="ir.ui.view">
+    <field name="name">project.project.select.extension</field>
+    <field name="model">project.project</field>
+    <field name="inherit_id" ref="project.view_project_project_filter"/>
+    <field name="arch" type="xml">
+        <xpath expr="//search" position="inside">
+            <filter string="High-Priority Projects" name="filter_high_priority_projects" domain="[('client_priority', '=', 'high')]"/>
+            <filter string="Active Contracts" name="filter_active_contracts" domain="[('contract_signed', '=', True)]"/>
+            <filter string="Government Projects" name="filter_government_projects" domain="[('project_type', '=', 'government')]"/>
+            <filter string="Revenue Above 100,000" name="filter_revenue_above_100k" domain="[('expected_revenue', '&gt;', 100000)]"/>
+            <separator/>
+        </xpath>
+    </field>
+</record>
+
+    <!-- new group access rights -->
+    <record id="group_project_extension_manager" model="res.groups">
+    <field name="name">Project Extension Manager</field>
+    <field name="category_id" ref="base.module_category_project"/>
+    </record>
+
+
+</odoo>
